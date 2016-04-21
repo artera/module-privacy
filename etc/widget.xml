@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="privacy_widget" class="Artera\Privacy\Block\Widget">
+		<label translate="true">Artera Privacy</label>
+		<description translate="true">Automatically retrieves content from the selected condition</description>
+	</widget>
+</widgets>
