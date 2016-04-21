@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * system.xml
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="artera" translate="label" sortOrder="100">
+			<label>Artera</label>
+		</tab>
+		<section id="privacy" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Privacy</label>
+			<tab>artera</tab>
+			<resource>Artera_Privacy::config</resource>
+			<group id="settings" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>General Settings</label>
+				<comment><![CDATA[This module requires the "Terms and Conditions" function to be active (otherwise you will not see the list of conditions).<br>This module creates a "Privacy Policy" page that automatically retrieves content from the selected condition, unless you have already created a page with the url key "privacy.html".<br>Use <strong>{{widget type="Artera\Privacy\Block\Widget"}}</strong> to automatically retrieve content from the selected condition (in your custom cms page).]]></comment>
+				<field id="agreement_id" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Condition</label>
+					<source_model>Artera\Privacy\Model\Config\Source\Agreements</source_model>
+				</field>
+				<field id="page_identifier" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>CMS Page</label>
+					<source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+					<depends>
+						<field id="agreement_id" separator="," negative="1">0</field>
+					</depends>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

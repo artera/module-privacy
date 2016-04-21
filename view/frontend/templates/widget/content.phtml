@@ -1,0 +1,13 @@
+<?php
+/**
+ * Privacy page content
+ */
+?>
+<?php $agreement = $this->getAgreement(); ?>
+<?php if ($agreement !== false) : ?>
+<?php if ($agreement->getIsHtml()) :?>
+	<?php /* @escapeNotVerified */ echo $agreement->getContent() ?>
+<?php else : ?>
+	<?php echo nl2br($block->escapeHtml($agreement->getContent())) ?>
+<?php endif; ?>
+<?php endif;

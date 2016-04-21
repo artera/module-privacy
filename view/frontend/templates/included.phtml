@@ -1,0 +1,23 @@
+<?php
+/**
+ * Agreement template
+ */
+$agreement = $this->getAgreement();
+?>
+<div class="privacy-container">
+	<div class="checkbox-container">
+		<input type="checkbox"
+				id="<?php echo $block->getNameInLayout(); ?>"
+				name="<?php echo $block->getNameInLayout(); ?>"
+				value="1"
+				title="<?php echo $block->escapeHtml($agreement->getCheckboxText()) ?>"
+				class="checkbox"
+				data-validate="{required:true}"/>
+		<label for="<?php echo $block->getNameInLayout(); ?>">
+			<span><?php echo $agreement->getIsHtml() ? $agreement->getCheckboxText() : $block->escapeHtml($agreement->getCheckboxText()) ?></span>
+		</label>
+	</div>
+	<?php if ($block->getPageUrl() !== false) : ?>
+	<a href="<?php /* @escapeNotVerified */ echo $block->getPageUrl() ?>" class="clearer" target="_blank"><?php /* @escapeNotVerified */ echo __('Privacy Policy') ?></a>
+	<?php endif; ?>
+</div>
