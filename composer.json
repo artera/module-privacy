@@ -1,5 +1,5 @@
 {
-  "name": "artera/magento2-privacy",
+  "name": "artera/module-privacy",
   "description": "A Magento 2 module that adds the Privacy acceptance checkbox in customer registration page, contact page and newsletter subscription form (retrieving text from Terms and Conditions).",
   "version": "2.0.0",
   "type": "magento2-module",
