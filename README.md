@@ -5,7 +5,7 @@ A Magento 2 module that adds the Privacy acceptance checkbox in:
 
 ## Installation guide
 ```bash
-$ composer require artera/magento2-privacy
+$ composer require artera/module-privacy
 $ php bin/magento cache:disable
 $ php bin/magento module:enable Artera_Privacy
 $ php bin/magento setup:upgrade
@@ -23,7 +23,7 @@ Modulo per Magento 2 che aggiunge la checkbox per l'accetazione della privacy:
 
 ## Installazione
 ```bash
-$ composer require artera/magento2-privacy
+$ composer require artera/module-privacy
 $ bin/magento cache:disable
 $ bin/magento module:enable Artera_Privacy
 $ bin/magento setup:upgrade
