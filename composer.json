@@ -12,6 +12,11 @@
     }
   ],
   "license": "MIT",
+  "require": {
+    "magento/module-checkout-agreements": "~100.0",
+    "magento/module-cms": ">=100 <102",
+    "magento/module-newsletter": "~100.0"
+  },
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
